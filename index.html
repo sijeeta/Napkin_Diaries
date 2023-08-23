@@ -319,21 +319,5 @@
                 document.getElementById("display").innerHTML = "Hello " + document.getElementById("user_name").value + " , Thank you for reaching out!";
             }
         </script>
-        <script src ="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            function sendmail(){
-                Email.send({
-                    Host : "smtp.gmail.com",
-                    Username : "debsijeeta@gmail.com",
-                    Password : "pass",
-                    To : 'debsijeeta@gmail.com',
-                    From : document.getElementById("user_mail").value,
-                    Subject : "Message from" + document.getElementById("user_name").value,
-                    Body : document.getElementById("user_msg").value
-                }).then(
-                message => alert("Message sent sucessfully!!")
-                );
-            }
-        </script>
     </body>
 </html>
