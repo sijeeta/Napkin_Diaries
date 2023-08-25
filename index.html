@@ -276,11 +276,9 @@
                 </p>
             </div>
             <form class="feedback" method="post" action="#" enctype="text/plain" ; reset()>
-                <label for="message">Write your message:</label><br>
-                <input name = "name" autofocus placeholder="Full Name" autocomplete="off" minlength = "2" id="user_name" required><br><br>
-                <input name = "mail" autofocus placeholder="your mail id" autocomplete="off" minlength ="8" id="user_mail" required><br><br>
+                <label for="message">Any suggestions?</label><br>
                 <input name = "message" autofocus placeholder="Write your message" autocomplete="off" id="user_msg" class = "message"><br><br>
-                <button type="submit" class="submit" onsubmit="acknowledge()" id="bttn" disabled>Send </button>
+                <button type="submit" class="submit" onsubmit="acknowledge()" id="bttn">Send </button>
             </form><br><br><br> 
             <p class="display"><b> <span id = "display"></span></b></p>
             <ul>
@@ -298,25 +296,8 @@
             </ul>
         </footer>   
         <script>
-
-            const user_name = document.getElementById("user_name");
-            const user_mail = document.getElementById("user_mail");
-            const bttn = document.getElementById("bttn");
-
-            function checkInputs() {
-                if (user_name.value.trim() !== '' && user_mail.value.trim() !== '') {
-                bttn.disabled = false;
-                } 
-                else {
-                bttn.disabled = true;
-                }
-            }
-
-            user_name.addEventListener('input', checkInputs);
-            user_mail.addEventListener('input', checkInputs);
-
             function acknowledge(){
-                document.getElementById("display").innerHTML = "Hello " + document.getElementById("user_name").value + " , Thank you for reaching out!";
+                document.getElementById("display").innerHTML = "Thank you for your valuable time & message!";
             }
         </script>
     </body>
